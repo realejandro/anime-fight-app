@@ -1,0 +1,19 @@
+ul{
+    list-style-type: none;
+    margin: 5%;
+    padding: 0;
+    display: flex;
+    background-color: cornflowerblue;
+    justify-content: space-around;
+}
+
+h2,h1{
+    font-style: italic;
+    text-align: center;
+}
+ h3{
+    text-align: center;
+    margin-top: 10%;
+ }
+ 
+
