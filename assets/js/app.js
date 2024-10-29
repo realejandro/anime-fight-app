@@ -1,6 +1,8 @@
 
 //const arrCharacters = []
 
+const mainForm = document.getElementsByClassName('anime-input');
+
 const arrAnime = [
         {
             animeName:'Demon Slayer',
@@ -65,19 +67,19 @@ const arrAnime = [
                 "characterName": "naruto",
                 "skills":"rasengan",
                 "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
-             }, { 
+             },{ 
                 "characterName": "sasuke",
                 "skills":"chidori",
                 "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
-             }, { 
+             },{ 
                 "characterName": "sakura",
                 "skills":"none",
                 "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
-             }, { 
+             },{ 
                 "characterName": "lee",
                 "skills":"taijutsu",
                 "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
-             }, { 
+             },{ 
                 "characterName": "kakashi",
                 "skills":"copy",
                 "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
@@ -88,7 +90,7 @@ const arrAnime = [
             characters: [{ 
                 "characterName": "naruto",
                 "skills":"rasengan",
-                "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg",
+                "url":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/76612106-8aba-4097-9619-baee44cc3b5f/db7svu6-1e7822cd-0e86-4f17-a09b-408bec10bea1.png/v1/fill/w_1024,h_1024/naruto_shippuden_naruto_uzumaki__rasengan__by_iennidesign_db7svu6-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzc2NjEyMTA2LThhYmEtNDA5Ny05NjE5LWJhZWU0NGNjM2I1ZlwvZGI3c3Z1Ni0xZTc4MjJjZC0wZTg2LTRmMTctYTA5Yi00MDhiZWMxMGJlYTEucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.khvIaUxqCglrYuCm8-PiYeTLKd8jB9nP37UDYiXhmXQ",
              }, { 
                 "characterName": "sasuke",
                 "skills":"chidori",
@@ -109,6 +111,14 @@ const arrAnime = [
         }
     ];
 
+
+const setRandomCharacter = ( anime ) => {
+    const boxesFight = document.getElementsByClassName('fighter-box');
+    const imageFighter = document.createElement('img');
+    imageFighter.setAttribute('src', getRandomCharacter(anime).url );
+    boxesFight[0].appendChild(imageFighter);
+    
+}
 
 
 const getRandomCharacter = ( anime ) => {
@@ -134,4 +144,14 @@ const getRandomCharacter = ( anime ) => {
 
 console.log( getRandomCharacter('naruto') );
 
+setRandomCharacter('naruto');
 
+
+mainForm[0].addEventListener('submit', (event) => {
+    event.preventDefault();
+    const animeOne = document.getElementById('anime1').value;
+    const animeTwo = document.getElementById('anime2').value;
+    
+    
+
+})
