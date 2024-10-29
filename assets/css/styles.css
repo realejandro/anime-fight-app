@@ -1,18 +1,42 @@
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(35deg, rgb(216, 114, 73) 70%, black 99%); 
+}
+
+header {
+    background-color: ;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
 ul{
     list-style-type: none;
     margin: 5%;
     padding: 0;
     display: flex;
-    background-color: cornflowerblue;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anime-images {
+    object-fit: contain;
 }
 
 h2,h1{
     text-align: center;
 }
 
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 h2 {
     margin-top: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .fighter-selection {
