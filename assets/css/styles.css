@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(35deg, rgb(216, 114, 73) 70%, black 99%); 
+    background: linear-gradient(to left bottom, rgb(216, 114, 73) ,rgb(73,114,216) ); 
 }
 
 header {
-    background-color: ;
+
 }
 
 nav {
@@ -32,6 +32,8 @@ h2,h1{
 
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+text-shadow: 1px 1px 2px black;
+    
 }
 
 h2 {
@@ -101,7 +103,8 @@ h3 {
 }
  
  img{
-    max-height: 100px;
+    max-height: 200px;
+    max-width: 200px;  
  }
 
 .fight-button{
