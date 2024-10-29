@@ -2,6 +2,7 @@
 //const arrCharacters = []
 
 const mainForm = document.getElementsByClassName('anime-input');
+const boxesFight = document.getElementsByClassName('fighter-box');
 
 const arrAnime = [
         {
@@ -111,12 +112,14 @@ const arrAnime = [
         }
     ];
 
-
-const setRandomCharacter = ( anime ) => {
-    const boxesFight = document.getElementsByClassName('fighter-box');
-    const imageFighter = document.createElement('img');
-    imageFighter.setAttribute('src', getRandomCharacter(anime).url );
-    boxesFight[0].appendChild(imageFighter);
+//reduce this code
+const setRandomCharacter = ( animeOne, animeTwo ) => {
+    const imageFighterOne = document.createElement('img');
+    const imageFighterTwo = document.createElement('img');
+    imageFighterOne.setAttribute('src', getRandomCharacter(animeOne).url);
+    imageFighterTwo.setAttribute('src', getRandomCharacter(animeTwo).url);
+    boxesFight[0].appendChild(imageFighterOne);
+    boxesFight[1].appendChild(imageFighterTwo);
     
 }
 
@@ -124,11 +127,11 @@ const setRandomCharacter = ( anime ) => {
 const getRandomCharacter = ( anime ) => {
     let randomCharacter='';
 
-    for(let i =0; i < arrAnime.length; i++){
+    for(let i =0; i < arrAnime.length; i++) {
         
         if( String(anime).toLocaleLowerCase() === arrAnime[i].animeName.toLocaleLowerCase() ) {
             let { characters } = arrAnime[i];
-            let randomIndex = Math.floor(Math.random() * characters.length);
+            let randomIndex = Math.floor( Math.random() * characters.length );
             randomCharacter = characters[randomIndex];
         }
     }
@@ -144,14 +147,10 @@ const getRandomCharacter = ( anime ) => {
 
 console.log( getRandomCharacter('naruto') );
 
-setRandomCharacter('naruto');
-
-
 mainForm[0].addEventListener('submit', (event) => {
     event.preventDefault();
     const animeOne = document.getElementById('anime1').value;
     const animeTwo = document.getElementById('anime2').value;
-    
-    
-
+    setRandomCharacter(animeOne, animeTwo);
+    console.log(animeOne);
 })
