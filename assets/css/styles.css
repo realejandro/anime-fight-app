@@ -4,9 +4,7 @@ body {
     background: linear-gradient(to left bottom, rgb(216, 114, 73) ,rgb(73,114,216) ); 
 }
 
-header {
 
-}
 
 nav {
     display: flex;
