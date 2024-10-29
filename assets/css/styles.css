@@ -1,10 +1,12 @@
+:root {
+  
+}
+
 body {
     margin: 0;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background: linear-gradient(to left bottom, rgb(216, 114, 73) ,rgb(73,114,216) ); 
 }
-
-
 
 nav {
     display: flex;
@@ -24,7 +26,7 @@ ul{
     object-fit: contain;
 }
 
-h2,h1{
+h3,h2,h1{
     text-align: center;
 }
 
@@ -39,6 +41,10 @@ h2 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 .fighter-selection {
     margin-top: 20px;
 }
@@ -51,6 +57,19 @@ h2 {
     position: relative;
     display: inline-block;
 }
+
+.fight-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0px;
+  margin-top: 60px;
+}
+
+.anime-choices {
+  margin: 0px 20px;
+}
+
 .anime-input {
     display: flex;
     flex-flow: column wrap;
@@ -96,19 +115,21 @@ h2 {
     background-color: var(--light-accent);
   }
 
-h3 {
+h2 {
     font-size: 2em;
 }
  
- img{
+img{
     max-height: 200px;
     max-width: 200px;  
  }
 
-.fight-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 0px; 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+h4 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
