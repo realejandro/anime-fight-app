@@ -8,22 +8,8 @@ body {
     background: linear-gradient(to left bottom, rgb(216, 114, 73) ,rgb(73,114,216) ); 
 }
 
-nav {
-    display: flex;
-    justify-content: center;
-}
-
-ul{
-    list-style-type: none;
-    margin: 5%;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.anime-images {
-    object-fit: contain;
+header {
+  margin: 50px 0px;
 }
 
 h3,h2,h1{
@@ -33,16 +19,20 @@ h3,h2,h1{
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-shadow: 1px 1px 2px black;
-    margin: 50px 0px;
 }
 
 h2 {
     margin-top: 30px;
+    font-size: 2em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h3 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.anime-images {
+  object-fit: contain;
 }
 
 .fighter-selection {
@@ -64,6 +54,15 @@ h3 {
   align-items: center;
   height: 0px;
   margin-top: 60px;
+}
+
+ul{
+  list-style-type: none;
+  margin: 5%;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .anime-choices {
@@ -114,10 +113,6 @@ h3 {
     font-size: 1rem;
     background-color: var(--light-accent);
   }
-
-h2 {
-    font-size: 2em;
-}
  
 img{
     max-height: 200px;
