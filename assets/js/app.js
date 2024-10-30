@@ -13,18 +13,23 @@ const arrAnime = [
             characters: [{ 
                 "characterName": "Tanjiro",
                 "skills":"Hinokami Kagura",
+                "url":"assets/images/Demon Slayer/Tanjiro.png"
              }, { 
                 "characterName": "Nezuko",
                 "skills":"Blood Demon Art",
+                "url":"assets/images/Demon Slayer/Nezuko.png"
              }, { 
                 "characterName": "Inosuke",
                 "skills":"Breath of the Beast",
+                "url":"assets/images/Demon Slayer/Inosuke.png"
              }, { 
                 "characterName": "Zenitsu",
                 "skills":"Thunderclap and Flash",
+                "url":"assets/images/Demon Slayer/Zenitsu.png"
              }, { 
                 "characterName": "Muzan",
                 "skills":"Absorption",
+                "url":"assets/images/Demon Slayer/Muzan.png"
              }]
         },
         {
@@ -32,18 +37,23 @@ const arrAnime = [
             characters: [{ 
                 "characterName": "Luffy",
                 "skills":"Gear 5",
+                "url":"assets/images/One Piece/Luffy.png"
              }, { 
                 "characterName": "Zoro",
                 "skills":"Onigiri",
+                "url":"assets/images/One Piece/Zoro.png"
              }, { 
                 "characterName": "Shanks",
                 "skills":"Observation Haki",
+                "url":"assets/images/One Piece/Shanks.png"
              }, { 
                 "characterName": "Sanji",
                 "skills":"8 Flanche Strike",
+                "url":"assets/images/One Piece/Sanji.png"
              }, { 
                 "characterName": "Nami",
                 "skills":"Clima-Tact",
+                "url":"assets/images/One Piece/Nami.png"
              }]
         },
         {
@@ -51,37 +61,47 @@ const arrAnime = [
             characters: [{ 
                 "characterName": "Yuji",
                 "skills":"Black Flash",
+                "url":"assets/images/Jujutsu Kaisen/Yuji.png"
              }, { 
                 "characterName": "Gojo",
                 "skills":"Infinity",
+                "url":"assets/images/Jujutsu Kaisen/Gojo.png"
              }, { 
                 "characterName": "Sukuna",
                 "skills":"Malevolent Shrine",
+                "url":"assets/images/Jujutsu Kaisen/Sukana.png"
              }, { 
                 "characterName": "Geto",
                 "skills":"Womb Profusion",
+                "url":"assets/images/Jujutsu Kaisen/Geto.png"
              }, { 
                 "characterName": "Todo",
                 "skills":"Boogie Woogie",
+                "url":"assets/images/Jujutsu Kaisen/Todo.png"
              }]
         },
         {
-            animeName:'Dragon Ball',
+            animeName:'Dragon Ball Z',
             characters: [{ 
                 "characterName": "Goku",
                 "skills":"Ultra-Instinct",
+                "url":"assets/images/Dragonball Z/Goku.png"
              },{ 
                 "characterName": "Vegeta",
                 "skills":"Galik Gun",
+                "url":"assets/images/Dragonball Z/Vegeta.png"
              },{ 
                 "characterName": "Hit",
                 "skills":"Time Lag",
+                "url":"assets/images/Dragonball Z/Hit.png"
              },{ 
                 "characterName": "Beerus",
                 "skills":"Destruction",
+                "url":"assets/images/Dragonball Z/Beerus.jpg"
              },{ 
                 "characterName": "Jiren",
                 "skills":"Power Impact",
+                "url":"assets/images/Dragonball Z/Jiren.png"
              }]
         },
         {
@@ -89,18 +109,23 @@ const arrAnime = [
             characters: [{ 
                 "characterName": "Naruto",
                 "skills":"Rasengan",
+                "url":"assets/images/Naruto/Naruto.png"
              }, { 
                 "characterName": "sasuke",
                 "skills":"Chidori",
+                "url":"assets/images/Naruto/Sasuke.png"
              }, { 
                 "characterName": "Neji",
                 "skills":"Byakugan",
+                "url":"assets/images/Naruto/Neji.jpg"
              }, { 
                 "characterName": "Rock Lee",
                 "skills":"Taijutsu",
+                "url":"assets/images/Naruto/RockLee.png"
              }, { 
                 "characterName": "Kakashi",
                 "skills":"Copy",
+                "url":"assets/images/Naruto/kakashi.jpg"
              }]
         }
     ];
@@ -149,7 +174,9 @@ const getRandomCharacter = ( anime ) => {
 
     for(let i =0; i < arrAnime.length; i++) {
         
-        if( String(anime).toLocaleLowerCase() === arrAnime[i].animeName.toLocaleLowerCase() ) {
+        if( String(anime).replace(" ","")
+            .trim().toLocaleLowerCase() === arrAnime[i].animeName.replace(" ", "")
+            .trim().toLocaleLowerCase() )  {
             let { characters } = arrAnime[i];
             let randomIndex = Math.floor( Math.random() * characters.length );
             randomCharacter = characters[randomIndex];
