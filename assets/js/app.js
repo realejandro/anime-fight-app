@@ -8,106 +8,96 @@ const arrAnime = [
         {
             animeName:'Demon Slayer',
             characters: [{ 
-                "characterName": "naruto",
-                "skills":"rasengan",
+                "characterName": "Tanjiro",
+                "skills":"Hinokami Kagura",
              }, { 
-                "characterName": "sasuke",
-                "skills":"chidori",
+                "characterName": "Nezuko",
+                "skills":"Blood Demon Art",
              }, { 
-                "characterName": "sakura",
-                "skills":"none",
+                "characterName": "Inosuke",
+                "skills":"Breath of the Beast",
              }, { 
-                "characterName": "lee",
-                "skills":"taijutsu",
+                "characterName": "Zenitsu",
+                "skills":"Thunderclap and Flash",
              }, { 
-                "characterName": "kakashi",
-                "skills":"copy",
+                "characterName": "Muzan",
+                "skills":"Absorption",
              }]
         },
         {
             animeName:'One piece',
             characters: [{ 
-                "characterName": "naruto",
-                "skills":"rasengan",
+                "characterName": "Luffy",
+                "skills":"Gear 5",
              }, { 
-                "characterName": "sasuke",
-                "skills":"chidori",
+                "characterName": "Zoro",
+                "skills":"Onigiri",
              }, { 
-                "characterName": "sakura",
-                "skills":"none",
+                "characterName": "Shanks",
+                "skills":"Observation Haki",
              }, { 
-                "characterName": "lee",
-                "skills":"taijutsu",
+                "characterName": "Sanji",
+                "skills":"8 Flanche Strike",
              }, { 
-                "characterName": "kakashi",
-                "skills":"copy",
+                "characterName": "Nami",
+                "skills":"Clima-Tact",
              }]
         },
         {
-            animeName:'Yuyutzu Kaisen',
+            animeName:'JuJutzu Kaisen',
             characters: [{ 
-                "characterName": "naruto",
-                "skills":"rasengan",
+                "characterName": "Yuji",
+                "skills":"Black Flash",
              }, { 
-                "characterName": "sasuke",
-                "skills":"chidori",
+                "characterName": "Gojo",
+                "skills":"Infinity",
              }, { 
-                "characterName": "sakura",
-                "skills":"none",
+                "characterName": "Sukuna",
+                "skills":"Malevolent Shrine",
              }, { 
-                "characterName": "lee",
-                "skills":"taijutsu",
+                "characterName": "Geto",
+                "skills":"Womb Profusion",
              }, { 
-                "characterName": "kakashi",
-                "skills":"copy",
+                "characterName": "Todo",
+                "skills":"Boogie Woogie",
              }]
         },
         {
             animeName:'Dragon Ball',
             characters: [{ 
-                "characterName": "naruto",
-                "skills":"rasengan",
-                "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
+                "characterName": "Goku",
+                "skills":"Ultra-Instinct",
              },{ 
-                "characterName": "sasuke",
-                "skills":"chidori",
-                "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
+                "characterName": "Vegeta",
+                "skills":"Galik Gun",
              },{ 
-                "characterName": "sakura",
-                "skills":"none",
-                "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
+                "characterName": "Hit",
+                "skills":"Time Lag",
              },{ 
-                "characterName": "lee",
-                "skills":"taijutsu",
-                "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
+                "characterName": "Beerus",
+                "skills":"Destruction",
              },{ 
-                "characterName": "kakashi",
-                "skills":"copy",
-                "url":"https://i.pinimg.com/736x/9c/1c/cc/9c1ccc8bfd376eecd216bf88c4879c1a.jpg"
+                "characterName": "Jiren",
+                "skills":"Power Impact",
              }]
         },
         {
             animeName:'Naruto',
             characters: [{ 
-                "characterName": "naruto",
-                "skills":"rasengan",
-                "url":"https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/76612106-8aba-4097-9619-baee44cc3b5f/db7svu6-1e7822cd-0e86-4f17-a09b-408bec10bea1.png/v1/fill/w_1024,h_1024/naruto_shippuden_naruto_uzumaki__rasengan__by_iennidesign_db7svu6-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTAyNCIsInBhdGgiOiJcL2ZcLzc2NjEyMTA2LThhYmEtNDA5Ny05NjE5LWJhZWU0NGNjM2I1ZlwvZGI3c3Z1Ni0xZTc4MjJjZC0wZTg2LTRmMTctYTA5Yi00MDhiZWMxMGJlYTEucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.khvIaUxqCglrYuCm8-PiYeTLKd8jB9nP37UDYiXhmXQ",
+                "characterName": "Naruto",
+                "skills":"Rasengan",
              }, { 
                 "characterName": "sasuke",
-                "skills":"chidori",
-                "url":"https://i.pinimg.com/736x/b2/b1/66/b2b16600f69611cbb250704d1c6b6809.jpg",
+                "skills":"Chidori",
              }, { 
-                "characterName": "sakura",
-                "skills":"none",
-                "url":"https://i.pinimg.com/736x/8a/0e/8d/8a0e8d8762e8790a788d0c84a68f650a.jpg",
+                "characterName": "Neji",
+                "skills":"Byakugan",
              }, { 
-                "characterName": "lee",
-                "skills":"taijutsu",
-                "url":"https://upload.wikimedia.org/wikipedia/en/9/9e/RockLee.png",
+                "characterName": "Rock Lee",
+                "skills":"Taijutsu",
              }, { 
-                "characterName": "kakashi",
-                "skills":"copy",
-                "url":"https://static.wikia.nocookie.net/naruto/images/2/27/Kakashi_Hatake.png/revision/latest/scale-to-width-down/1000?cb=20230803224121",
+                "characterName": "Kakashi",
+                "skills":"Copy",
              }]
         }
     ];
