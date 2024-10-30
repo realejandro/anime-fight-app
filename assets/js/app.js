@@ -97,7 +97,7 @@ const arrAnime = [
              },{ 
                 "characterName": "Beerus",
                 "skills":"Destruction",
-                "url":"assets/images/Dragonball Z/Beerus.jpg"
+                "url":"assets/images/Dragonball Z/Beerus.png"
              },{ 
                 "characterName": "Jiren",
                 "skills":"Power Impact",
@@ -117,7 +117,7 @@ const arrAnime = [
              }, { 
                 "characterName": "Neji",
                 "skills":"Byakugan",
-                "url":"assets/images/Naruto/Neji.jpg"
+                "url":"assets/images/Naruto/Neji.png"
              }, { 
                 "characterName": "Rock Lee",
                 "skills":"Taijutsu",
@@ -125,7 +125,7 @@ const arrAnime = [
              }, { 
                 "characterName": "Kakashi",
                 "skills":"Copy",
-                "url":"assets/images/Naruto/kakashi.jpg"
+                "url":"assets/images/Naruto/kakashi.png"
              }]
         }
     ];
