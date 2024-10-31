@@ -81,7 +81,7 @@ const arrAnime = [
              }]
         },
         {
-            animeName:'Dragon Ball Z',
+            animeName:'Dragonball Z',
             characters: [{ 
                 "characterName": "Goku",
                 "skills":"Ultra-Instinct",
