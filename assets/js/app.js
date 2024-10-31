@@ -57,7 +57,7 @@ const arrAnime = [
              }]
         },
         {
-            animeName:'JuJutzu Kaisen',
+            animeName:'JuJutsu Kaisen',
             characters: [{ 
                 "characterName": "Yuji",
                 "skills":"Black Flash",
@@ -69,7 +69,7 @@ const arrAnime = [
              }, { 
                 "characterName": "Sukuna",
                 "skills":"Malevolent Shrine",
-                "url":"assets/images/Jujutsu Kaisen/Sukana.png"
+                "url":"assets/images/Jujutsu Kaisen/Sukuna.png"
              }, { 
                 "characterName": "Geto",
                 "skills":"Womb Profusion",
