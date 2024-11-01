@@ -212,38 +212,32 @@ mainForm[0].addEventListener('submit', (event) => {
 //modal
 modalBtn.addEventListener('click', () => {
    const modalBody = document.getElementsByClassName('modal-body')[0];
-   /*
-   const contentOne = document.createElement('div');//card
-   contentOne.setAttribute('class', 'card-body');
-   contentOne.innerHTML = `
-   <h2 class="card-title"> ${currentElements[0].characterName} </h2>
-   <p class="card-text text-center"  >${currentElements[0].skills}</p>
-   `;
 
-   const contentTwo = document.createElement('div');//card
-   contentTwo.setAttribute('class', 'card-body');
-   contentTwo.innerHTML = `
-   <h2 class="card-title"> ${currentElements[1].characterName} </h2>
-   <p class="card-text text-center"> ${currentElements[1].skills} </p>
-   `;
-   */
+   const modalTitle = document.getElementById('exampleModalLabel');
+   modalTitle.innerText = `${currentElements[0].characterName} vs ${currentElements[1].characterName}`;
 
    const winnerDiv = document.createElement('div');
    winnerDiv.setAttribute('class', 'card-body');
-   const random = Math.floor(Math.random() * currentElements.length );
+   const random = Math.floor(Math.random() * currentElements.length);
    const winnerCharacter = currentElements[random].characterName;
-   winnerDiv.innerHTML=`<h2>${winnerCharacter} Won!!! </h2>`;
-   
-   
-   
+   winnerDiv.innerHTML = `<h2>${winnerCharacter} Won!!!</h2>`;
 
-   
-   /*modalBody.appendChild(contentOne);
-   modalBody.appendChild(contentTwo);*/
+   modalBody.innerHTML = '';
    modalBody.appendChild(winnerDiv);
    console.log(currentElements);
 })
 
 btnAgain.addEventListener('click', () => {
-   
+  const modalBody = document.getElementsByClassName('modal-body')[0];
+  modalBody.innerHTML = ''; 
+
+  boxesFight[0].innerHTML = '';
+  boxesFight[1].innerHTML = '';
+  
+  currentElements = [];
+
+  const modal = bootstrap.Modal.getInstance(document.getElementById('exampleModal'));
+  if (modal) {
+      modal.hide();
+  }
 });
