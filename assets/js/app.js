@@ -4,8 +4,10 @@
 const mainForm = document.getElementsByClassName('anime-input');
 const boxesFight = document.getElementsByClassName('fighter-box');
 const modalBtn = document.getElementsByClassName('btn btn-danger')[0];
+const btnAgain = document.getElementById('play-again');
 
 let currentElements = [];
+
 
 const arrAnime = [
         {
@@ -111,7 +113,7 @@ const arrAnime = [
                 "skills":"Rasengan",
                 "url":"assets/images/Naruto/Naruto.png"
              }, { 
-                "characterName": "sasuke",
+                "characterName": "Sasuke",
                 "skills":"Chidori",
                 "url":"assets/images/Naruto/Sasuke.png"
              }, { 
@@ -125,7 +127,7 @@ const arrAnime = [
              }, { 
                 "characterName": "Kakashi",
                 "skills":"Copy",
-                "url":"assets/images/Naruto/kakashi.png"
+                "url":"assets/images/Naruto/Kakashi.png"
              }]
         }
     ];
@@ -160,20 +162,23 @@ const displayImageCharacters = ( animeOne, animeTwo ) => {
 
 
 
+
 //modal
 const modalContent = (animeOne, animeTwo) => {
-   const div = document.createElement('div');
+   const divOne = document.createElement('div');
+   div.setAttribute('class','modal-body');
    const p = document.createElement('p');
-   p.innerText = animeOne;
-   div.appendChild(p);
-   return div;
+   p.innerText = animeOne.skills;
+   divOne.appendChild(p);
+   //return div;
 }
 
 
 
 
 const getRandomCharacter = ( anime ) => {
-    let randomCharacter='';
+    
+   let randomCharacter='';
 
     for(let i =0; i < arrAnime.length; i++) {
         
@@ -201,14 +206,44 @@ mainForm[0].addEventListener('submit', (event) => {
     const animeOne = document.getElementById('anime1').value;
     const animeTwo = document.getElementById('anime2').value;
     displayImageCharacters(animeOne, animeTwo);
-    //console.log(modalContent(getRandomCharacter(animeOne).skills));
+    
 })
 
 //modal
 modalBtn.addEventListener('click', () => {
    const modalBody = document.getElementsByClassName('modal-body')[0];
-   const content = document.createElement('textarea');
-   content.innerText = "creating modal";
-   modalBody.appendChild(content);
+   /*
+   const contentOne = document.createElement('div');//card
+   contentOne.setAttribute('class', 'card-body');
+   contentOne.innerHTML = `
+   <h2 class="card-title"> ${currentElements[0].characterName} </h2>
+   <p class="card-text text-center"  >${currentElements[0].skills}</p>
+   `;
+
+   const contentTwo = document.createElement('div');//card
+   contentTwo.setAttribute('class', 'card-body');
+   contentTwo.innerHTML = `
+   <h2 class="card-title"> ${currentElements[1].characterName} </h2>
+   <p class="card-text text-center"> ${currentElements[1].skills} </p>
+   `;
+   */
+
+   const winnerDiv = document.createElement('div');
+   winnerDiv.setAttribute('class', 'card-body');
+   const random = Math.floor(Math.random() * currentElements.length );
+   const winnerCharacter = currentElements[random].characterName;
+   winnerDiv.innerHTML=`<h2>${winnerCharacter} Won!!! </h2>`;
+   
+   
+   
+
+   
+   /*modalBody.appendChild(contentOne);
+   modalBody.appendChild(contentTwo);*/
+   modalBody.appendChild(winnerDiv);
    console.log(currentElements);
 })
+
+btnAgain.addEventListener('click', () => {
+   
+});
