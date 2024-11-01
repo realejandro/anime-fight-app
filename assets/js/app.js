@@ -137,7 +137,8 @@ const arrAnime = [
 
 // function to display character images within fighterbox    
 const displayImageCharacters = ( animeOne, animeTwo ) => {
-    const imageFighterOne = document.createElement('img');
+    
+   const imageFighterOne = document.createElement('img');
     const imageFighterTwo = document.createElement('img');
 
     const randomCharacterOne = getRandomCharacter(animeOne);
@@ -164,18 +165,6 @@ const displayImageCharacters = ( animeOne, animeTwo ) => {
 };
 
 
-//modal
-const modalContent = (animeOne, animeTwo) => {
-   const divOne = document.createElement('div');
-   div.setAttribute('class','modal-body');
-   const p = document.createElement('p');
-   p.innerText = animeOne.skills;
-   divOne.appendChild(p);
-   //return div;
-}
-
-
-//random character function
 const getRandomCharacter = ( anime ) => {
     
    let randomCharacter='';
@@ -282,3 +271,5 @@ btnAgain.addEventListener('click', () => {
       modal.hide();
   }
 });
+
+//comment
