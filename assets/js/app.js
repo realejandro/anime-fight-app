@@ -134,7 +134,8 @@ const arrAnime = [
 
 //reduce this code
 const displayImageCharacters = ( animeOne, animeTwo ) => {
-    const imageFighterOne = document.createElement('img');
+    
+   const imageFighterOne = document.createElement('img');
     const imageFighterTwo = document.createElement('img');
 
     const randomCharacterOne = getRandomCharacter(animeOne);
@@ -159,20 +160,6 @@ const displayImageCharacters = ( animeOne, animeTwo ) => {
     boxesFight[1].appendChild(imageFighterTwo);
     
 };
-
-
-
-
-//modal
-const modalContent = (animeOne, animeTwo) => {
-   const divOne = document.createElement('div');
-   div.setAttribute('class','modal-body');
-   const p = document.createElement('p');
-   p.innerText = animeOne.skills;
-   divOne.appendChild(p);
-   //return div;
-}
-
 
 
 
@@ -241,3 +228,5 @@ btnAgain.addEventListener('click', () => {
       modal.hide();
   }
 });
+
+//comment
