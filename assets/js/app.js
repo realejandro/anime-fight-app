@@ -6,9 +6,11 @@ const boxesFight = document.getElementsByClassName('fighter-box');
 const modalBtn = document.getElementsByClassName('btn btn-danger')[0];
 const btnAgain = document.getElementById('play-again');
 
+
 let currentElements = [];
 
 
+//anime options object
 const arrAnime = [
         {
             animeName:'Demon Slayer',
@@ -132,7 +134,8 @@ const arrAnime = [
         }
     ];
 
-//reduce this code
+
+// function to display character images within fighterbox    
 const displayImageCharacters = ( animeOne, animeTwo ) => {
     
    const imageFighterOne = document.createElement('img');
@@ -162,7 +165,6 @@ const displayImageCharacters = ( animeOne, animeTwo ) => {
 };
 
 
-
 const getRandomCharacter = ( anime ) => {
     
    let randomCharacter='';
@@ -187,6 +189,7 @@ const getRandomCharacter = ( anime ) => {
     };
 }
 
+
 //form action
 mainForm[0].addEventListener('submit', (event) => {
     event.preventDefault();
@@ -196,17 +199,45 @@ mainForm[0].addEventListener('submit', (event) => {
     
 })
 
-//modal
+
+//initialize anime wins in local storage
+const initializeWins = () => {
+   const animeWins = {
+       'Demon Slayer': 0,
+       'One piece': 0,
+       'JuJutsu Kaisen': 0,
+       'Dragonball Z': 0,
+       'Naruto': 0,
+   };
+   if (!localStorage.getItem('animeWins')) {
+       localStorage.setItem('animeWins', JSON.stringify(animeWins));
+   }
+};
+
+const updateWins = (winnerAnime) => {
+   const animeWins = JSON.parse(localStorage.getItem('animeWins'));
+   if (animeWins[winnerAnime] !== undefined) {
+       animeWins[winnerAnime] += 1;
+       localStorage.setItem('animeWins', JSON.stringify(animeWins));
+   }
+};
+
+initializeWins();
+
+
+//modal-click
 modalBtn.addEventListener('click', () => {
    const modalBody = document.getElementsByClassName('modal-body')[0];
-
    const modalTitle = document.getElementById('exampleModalLabel');
+
    modalTitle.innerText = `${currentElements[0].characterName} vs ${currentElements[1].characterName}`;
 
    const winnerDiv = document.createElement('div');
    winnerDiv.setAttribute('class', 'card-body');
    const random = Math.floor(Math.random() * currentElements.length);
    const winnerCharacter = currentElements[random].characterName;
+   const winnerAnime = getAnimeName(winnerCharacter);
+   updateWins(winnerAnime);
    winnerDiv.innerHTML = `<h2>${winnerCharacter} Won!!!</h2>`;
 
    modalBody.innerHTML = '';
@@ -214,6 +245,18 @@ modalBtn.addEventListener('click', () => {
    console.log(currentElements);
 })
 
+//gets anime name based on character name for win counter
+const getAnimeName = (characterName) => {
+   for (let anime of arrAnime) {
+       const foundCharacter = anime.characters.find(character => character.characterName === characterName);
+       if (foundCharacter) {
+           return anime.animeName; 
+       }
+   }
+   return null; 
+};
+
+//play again button
 btnAgain.addEventListener('click', () => {
   const modalBody = document.getElementsByClassName('modal-body')[0];
   modalBody.innerHTML = ''; 
