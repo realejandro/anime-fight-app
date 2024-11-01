@@ -150,10 +150,13 @@ const displayImageCharacters = ( animeOne, animeTwo ) => {
     imageFighterOne.setAttribute('src', randomCharacterOne.url);
     imageFighterTwo.setAttribute('src', randomCharacterTwo.url);
 
+    boxesFight[0].innerHTML = '';
+    boxesFight[1].innerHTML = '';
+
     boxesFight[0].appendChild(imageFighterOne);
     boxesFight[1].appendChild(imageFighterTwo);
     
-}
+};
 
 
 
