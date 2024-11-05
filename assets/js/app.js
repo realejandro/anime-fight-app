@@ -193,9 +193,14 @@ const getRandomCharacter = ( anime ) => {
 //form action
 mainForm[0].addEventListener('submit', (event) => {
     event.preventDefault();
+    const animeSelection = ['naruto', 'dragonball z', 'one piece', 'jujutsu kaisen', 'demon slayer'];
     const animeOne = document.getElementById('anime1').value;
     const animeTwo = document.getElementById('anime2').value;
-    displayImageCharacters(animeOne, animeTwo);
+    if(animeSelection.includes(animeOne.toLowerCase() ) && animeSelection.includes(animeTwo.toLowerCase() )){
+      displayImageCharacters(animeOne, animeTwo);
+    } else {
+      alert("Please Select one of the animes for both inputs : ('naruto', 'dragonball z', 'one piece', 'jujutsu kaisen', 'demon slayer')");
+    }
     
 })
 
@@ -213,6 +218,8 @@ const initializeWins = () => {
        localStorage.setItem('animeWins', JSON.stringify(animeWins));
    }
 };
+
+
 
 const updateWins = (winnerAnime) => {
    const animeWins = JSON.parse(localStorage.getItem('animeWins'));
