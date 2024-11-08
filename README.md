@@ -8,7 +8,7 @@
 <p align="center">
     -
     <br />
-    <a href="https://realejandro.github.io/anime-figtht-app/"><strong> Link To Project </strong></a>
+    <a href="https://realejandro.github.io/anime-fight-app/"><strong> Link To Project </strong></a>
     <br />
     <br />
     <a href="#project-description">Project Description</a>
